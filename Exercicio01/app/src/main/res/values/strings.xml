@@ -1,0 +1,19 @@
+<resources>
+    <string name="app_name">Exercicio01</string>
+
+    <string name="digite_peso">Digite seu peso (kg):</string>
+    <string name="digite_altura">Digite sua altura (cm):</string>
+    <string name="calcular_imc">Calcular IMC</string>
+
+
+    <string name="status_1">Magreza grave</string>
+    <string name="status_2">Magreza moderada</string>
+    <string name="status_3">Magreza leve</string>
+    <string name="status_4">Saudável</string>
+    <string name="status_5">Sobrepeso</string>
+    <string name="status_6">Obesidade Grau I</string>
+    <string name="status_7">Obesidade Grau II (severa)</string>
+    <string name="status_8">Obesidade Grau III (mórbida)</string>
+
+
+</resources>

@@ -1,0 +1,46 @@
+<resources>
+    <string name="app_name">Exercicio03</string>
+    <string name="pessoas">Pessoas</string>
+    <string name="consumo">Consumo</string>
+    <string name="taxa_servico">Taxa de Serviço</string>
+    <string name="title_activity_pessoas">PessoasActivity</string>
+    <string name="digite_nome_pessoa">Digite o nome da pessoa</string>
+
+    <string name="digite_nome_consumo">Digite o nome do consumo</string>
+    <string name="digite_quantidade">Quantidade</string>
+    <string name="digite_valor_unitario">Valor unitário</string>
+
+    <string name="valor_unitario">Valor unitário:</string>
+    <string name="quantidade">Quantidade:</string>
+    <string name="total">Total:</string>
+    <string name="title_activity_consumos">ConsumosActivity</string>
+
+    <string name="zero">R$ 0.00</string>
+    <string name="zero_pessoa">0</string>
+
+
+    <string name="consumo_total">Consumo Total</string>
+    <string name="pessoa_total">Pessoa Total</string>
+    <string name="porcentagem_garcom">Porcentagem Garçom</string>
+    <string name="resultado">Resultado</string>
+
+
+    <string name="valor_garcom">Valor do Garçom:</string>
+    <string name="valor_total">Valor Total:</string>
+    <string name="valor_individual">Valor Individual:</string>
+
+
+    <string name="porcentagem_00">00%</string>
+    <string name="porcentagem_10">10%</string>
+    <string name="porcentagem_20">20%</string>
+    <string name="porcentagem_30">30%</string>
+    <string name="porcentagem_40">40%</string>
+    <string name="porcentagem_50">50%</string>
+    <string name="porcentagem_60">60%</string>
+    <string name="porcentagem_70">70%</string>
+    <string name="porcentagem_80">80%</string>
+    <string name="porcentagem_90">90%</string>
+    <string name="porcentagem_100">100%</string>
+
+
+</resources>
