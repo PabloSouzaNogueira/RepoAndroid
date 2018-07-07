@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "237960470043",
+    "firebase_url": "https://filmes-12aa8.firebaseio.com",
+    "project_id": "filmes-12aa8",
+    "storage_bucket": "filmes-12aa8.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:237960470043:android:f19ecb3ac45288df",
+        "android_client_info": {
+          "package_name": "br.pucminas.pablo.exercicio06"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "237960470043-rvo3108a13s907aq0f357p9u12idsgih.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "br.pucminas.pablo.exercicio06",
+            "certificate_hash": "8847040e6e6aab1092063bceae4bc65233506076"
+          }
+        },
+        {
+          "client_id": "237960470043-92cc6deuls98bdbkb6301ni0seehcsem.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBkpvKacaLqozZUroXaq5CqeMgbtXSzQTE"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "237960470043-92cc6deuls98bdbkb6301ni0seehcsem.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

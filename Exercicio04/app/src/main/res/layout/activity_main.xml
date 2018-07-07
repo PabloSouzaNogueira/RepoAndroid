@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/LL_container"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorpretoclaro"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <android.support.v7.widget.Toolbar xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/colorpreto"
+            android:minHeight="?attr/actionBarSize"
+            app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+            app:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:padding="12dp"
+            android:text="Exercicio04"
+            android:textColor="@color/colorbranco"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+    </FrameLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center_vertical"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:text="Selecione a cor principal do APP"
+            android:textColor="@color/colorpreto"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="50dp" />
+
+        <RadioGroup
+            android:id="@+id/RG_cores"
+
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal">
+
+
+            <RadioButton
+                android:id="@+id/RB_azul"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:buttonTint="@color/colorpreto"
+                android:text="Azul"
+                android:textColor="@color/colorpreto"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                tools:targetApi="lollipop" />
+
+
+            <RadioButton
+                android:id="@+id/RB_verde"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:buttonTint="@color/colorpreto"
+                android:text="Verde"
+                android:textColor="@color/colorpreto"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                tools:targetApi="lollipop" />
+
+            <RadioButton
+                android:id="@+id/RB_amarelo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:buttonTint="@color/colorpreto"
+                android:text="Amarelo"
+                android:textColor="@color/colorpreto"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                tools:targetApi="lollipop" />
+
+            <RadioButton
+                android:id="@+id/RB_vermelho"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:buttonTint="@color/colorpreto"
+                android:text="Vermelho"
+                android:textColor="@color/colorpreto"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                tools:targetApi="lollipop" />
+
+
+        </RadioGroup>
+
+    </LinearLayout>
+
+
+</android.support.v7.widget.LinearLayoutCompat>
