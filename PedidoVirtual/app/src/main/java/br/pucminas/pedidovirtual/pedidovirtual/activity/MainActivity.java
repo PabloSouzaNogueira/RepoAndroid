@@ -155,8 +155,21 @@ public class MainActivity extends AppCompatActivity {
                 }
             });
         } else {
-            Toast.makeText(MainActivity.this, R.string.habilitar_internet, Toast.LENGTH_LONG).show();
-            //carregar realm
+            Mesa mesa = realm.where(Mesa.class).equalTo("idQRCode", qrcode).findFirst();
+
+            if (mesa != null) {
+                long existeEstabelecimento = realm.where(Estabelecimento.class).equalTo("idEstabelecimento", mesa.getIdEstabelecimento()).count();
+
+                if (existeEstabelecimento > 0) {
+                    Intent intent = new Intent(MainActivity.this, EstabelecimentoActivity.class);
+                    intent.putExtra("qrcode", qrcode);
+                    startActivity(intent);
+                }
+                Toast.makeText(MainActivity.this, R.string.habilitar_internet, Toast.LENGTH_LONG).show();
+
+            } else {
+                Toast.makeText(this, R.string.erro_carregar_estabelecimento, Toast.LENGTH_LONG).show();
+            }
         }
 
     }
