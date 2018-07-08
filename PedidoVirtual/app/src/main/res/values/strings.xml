@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">Pedido Virtual</string>
+
+    <string name="habilitar_permissaoArmazenamento">Favor habilitar o acesso ao armazenamento interno para o aplicativo PedidoVirtual.</string>
+    <string name="habilitar_permissaoCamera">Favor habilitar o acesso a cÃ¢mera para o aplicativo PedidoVirtual.</string>
+    <string name="habilitar_permissaoLocalizacao">Favor habilitar o acesso ao GPS para o aplicativo PedidoVirtual.</string>
+    <string name="habilitar_internet">Favor habilitar o acesso a internet.</string>
+
+    <string name="fechar">Fechar</string>
+    <string name="tirar_foto">Tirar Foto</string>
+
+    <string name="instrucao">Para ter acesso ao cardápio do estabelecimento tire a foto do QRCode que se encontra em sua mesa.</string>
+
+</resources>
