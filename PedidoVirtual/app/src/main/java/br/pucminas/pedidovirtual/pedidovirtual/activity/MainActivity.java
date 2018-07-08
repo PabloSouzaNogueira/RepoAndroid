@@ -1,11 +1,15 @@
 package br.pucminas.pedidovirtual.pedidovirtual.activity;
 
 import android.content.Intent;
+import android.graphics.PorterDuff;
 import android.support.annotation.NonNull;
+import android.support.v4.content.ContextCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.FrameLayout;
+import android.widget.ProgressBar;
 import android.widget.Toast;
 
 import com.google.zxing.integration.android.IntentIntegrator;
@@ -20,6 +24,7 @@ import br.pucminas.pedidovirtual.pedidovirtual.model.Prato;
 import br.pucminas.pedidovirtual.pedidovirtual.model.RequestEstabelecimento;
 import br.pucminas.pedidovirtual.pedidovirtual.model.RequestPrato;
 import br.pucminas.pedidovirtual.pedidovirtual.repository.EstabelecimentoRepository;
+import butterknife.BindView;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
 import io.realm.Realm;
@@ -31,13 +36,20 @@ import retrofit2.Response;
 
 public class MainActivity extends AppCompatActivity {
 
+    @BindView(R.id.FL_progressBar)
+    FrameLayout FL_progressBar;
+    @BindView(R.id.PB_progress)
+    ProgressBar PB_progress;
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
         ButterKnife.bind(this);
-        loadQRCode(2);
+
+        PB_progress.getIndeterminateDrawable().setColorFilter(ContextCompat.getColor(this, R.color.colorPrimary), PorterDuff.Mode.MULTIPLY);
     }
 
     @OnClick(R.id.TV_tirarFoto)
@@ -71,6 +83,8 @@ public class MainActivity extends AppCompatActivity {
         final Realm realm = Realm.getInstance(PersistenceUtil.realmConfig());
 
         if (NetworkUtil.isConnected(this)) {
+            FL_progressBar.setVisibility(View.VISIBLE);
+
             PersistenceUtil.repositoryPedidoVirtual().create(EstabelecimentoRepository.class).consultarQRCode(qrcode).enqueue(new Callback<RequestEstabelecimento>() {
                 @Override
                 public void onResponse(@NonNull Call<RequestEstabelecimento> call, final @NonNull Response<RequestEstabelecimento> response) {
@@ -119,6 +133,7 @@ public class MainActivity extends AppCompatActivity {
                                     realm.copyToRealmOrUpdate(estabelecimento);
 
                                     Intent intent = new Intent(MainActivity.this, EstabelecimentoActivity.class);
+                                    intent.putExtra("qrcode", qrcode);
                                     startActivity(intent);
                                 }
                             });
@@ -126,13 +141,17 @@ public class MainActivity extends AppCompatActivity {
                             if (response.body().getMessage() != null)
                                 Toast.makeText(MainActivity.this, response.body().getMessage(), Toast.LENGTH_LONG).show();
                         }
+                    } else {
+                        Toast.makeText(MainActivity.this, R.string.ocorreu_erro, Toast.LENGTH_LONG).show();
                     }
+
+                    FL_progressBar.setVisibility(View.GONE);
                 }
 
                 @Override
                 public void onFailure(@NonNull Call<RequestEstabelecimento> call, @NonNull Throwable t) {
-
-                    t.printStackTrace();
+                    FL_progressBar.setVisibility(View.GONE);
+                    Toast.makeText(MainActivity.this, t.getMessage(), Toast.LENGTH_LONG).show();
                 }
             });
         } else {

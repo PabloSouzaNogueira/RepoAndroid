@@ -41,6 +41,7 @@
 
 
         <TextView
+            android:elevation="2dp"
             android:id="@+id/TV_tirarFoto"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -53,9 +54,45 @@
             android:text="@string/tirar_foto"
             android:textColor="@color/colorbranco"
             android:textSize="18sp"
-            android:textStyle="bold" />
+            android:textStyle="bold"
+            tools:ignore="UnusedAttribute" />
 
 
     </LinearLayout>
+
+    <FrameLayout
+        android:id="@+id/FL_progressBar"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/colorpretotransparent"
+        android:elevation="5dp"
+        android:visibility="gone"
+        tools:ignore="UnusedAttribute">
+
+        <LinearLayout
+            android:gravity="center"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <ProgressBar
+                android:id="@+id/PB_progress"
+                android:layout_width="80dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center" />
+
+            <TextView
+                android:layout_marginBottom="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="@string/processandoqrcode"
+                android:textColor="@color/colorbranco"
+                android:textSize="15sp"
+                android:visibility="visible" />
+
+        </LinearLayout>
+
+    </FrameLayout>
 
 </android.support.constraint.ConstraintLayout>

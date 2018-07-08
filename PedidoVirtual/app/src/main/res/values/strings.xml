@@ -5,10 +5,16 @@
     <string name="habilitar_permissaoCamera">Favor habilitar o acesso a cÃ¢mera para o aplicativo PedidoVirtual.</string>
     <string name="habilitar_permissaoLocalizacao">Favor habilitar o acesso ao GPS para o aplicativo PedidoVirtual.</string>
     <string name="habilitar_internet">Favor habilitar o acesso a internet.</string>
+    <string name="ocorreu_erro">Ops, ocorreu um erro.</string>
+    <string name="erro_carregar_estabelecimento">Não foi possível carregar o estabelecimento.</string>
 
     <string name="fechar">Fechar</string>
     <string name="tirar_foto">Tirar Foto</string>
+    <string name="visualizar_cardapio">Visualizar Cardápio</string>
+    <string name="endereco">Endereço:</string>
+    <string name="mesa">Mesa:</string>
 
     <string name="instrucao">Para ter acesso ao cardápio do estabelecimento tire a foto do QRCode que se encontra em sua mesa.</string>
+    <string name="processandoqrcode">Por favor aguarde\nestamos processando o QRCode…</string>
 
 </resources>
