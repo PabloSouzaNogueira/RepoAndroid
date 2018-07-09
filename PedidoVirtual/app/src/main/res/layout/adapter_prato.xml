@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/LL_prato"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="5dp"
+    android:layout_marginTop="5dp"
+    android:background="@drawable/bg_ripple_branco_rounded"
+    android:elevation="2dp"
+    android:orientation="horizontal"
+    android:padding="10dp"
+    tools:ignore="UnusedAttribute">
+
+    <ImageView
+        android:id="@+id/IV_foto"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:src="@drawable/ic_shape_rounded" />
+
+    <View
+        android:layout_width="15dp"
+        android:layout_height="0dp" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/TV_nome"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:text="@string/instrucao"
+            android:textColor="@color/colorcinzaescuro"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/TV_preco"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentEnd="true"
+            android:ellipsize="end"
+            android:maxLines="2"
+            android:text="@string/instrucao"
+            android:textColor="@color/colorPrimary"
+            android:textSize="18sp"
+            android:textStyle="bold|italic"
+            tools:text="Valor: R$ 17,90" />
+
+    </RelativeLayout>
+
+</LinearLayout>

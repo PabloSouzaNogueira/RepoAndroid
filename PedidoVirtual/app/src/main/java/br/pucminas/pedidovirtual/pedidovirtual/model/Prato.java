@@ -26,6 +26,10 @@ public class Prato implements RealmModel {
     @Expose
     private String foto;
 
+    @SerializedName("preco")
+    @Expose
+    private double preco;
+
 
 
     public int getIdPrato() {
@@ -58,5 +62,13 @@ public class Prato implements RealmModel {
 
     public void setFoto(String foto) {
         this.foto = foto;
+    }
+
+    public double getPreco() {
+        return preco;
+    }
+
+    public void setPreco(double preco) {
+        this.preco = preco;
     }
 }

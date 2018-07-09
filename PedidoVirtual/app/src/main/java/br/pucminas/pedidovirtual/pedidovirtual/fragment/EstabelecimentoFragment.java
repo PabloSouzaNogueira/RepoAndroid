@@ -1,6 +1,7 @@
 package br.pucminas.pedidovirtual.pedidovirtual.fragment;
 
 import android.os.Bundle;
+import android.support.annotation.NonNull;
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -35,7 +36,7 @@ public class EstabelecimentoFragment extends Fragment {
 
 
     @Override
-    public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
+    public View onCreateView(@NonNull LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_estabelecimento, container, false);
 
         ButterKnife.bind(this, view);
@@ -55,7 +56,7 @@ public class EstabelecimentoFragment extends Fragment {
             String cidade = activity.getEstabelecimento().getCidade();
             String estado = activity.getEstabelecimento().getEstado();
 
-            Locale brazil = new Locale("pt", "br");
+            Locale brazil = new Locale("pt", "BR");
             TV_endereco.setText(String.format(brazil, "%1$s, %2$s - %3$s, %4$s/%5$s ", rua, numero, bairro, cidade, estado));
             TV_mesa.setText(String.valueOf(activity.getMesa().getMesa()));
             TV_nome.setText(activity.getEstabelecimento().getNome());

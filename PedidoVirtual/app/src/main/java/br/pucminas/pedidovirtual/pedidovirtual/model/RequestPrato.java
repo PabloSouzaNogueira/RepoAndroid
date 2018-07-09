@@ -17,7 +17,9 @@ public class RequestPrato {
     @Expose
     @SerializedName("Foto")
     private String foto;
-
+    @Expose
+    @SerializedName("Preco")
+    private double preco;
 
     public int getIdPrato() {
         return idPrato;
@@ -49,5 +51,13 @@ public class RequestPrato {
 
     public void setFoto(String foto) {
         this.foto = foto;
+    }
+
+    public double getPreco() {
+        return preco;
+    }
+
+    public void setPreco(double preco) {
+        this.preco = preco;
     }
 }

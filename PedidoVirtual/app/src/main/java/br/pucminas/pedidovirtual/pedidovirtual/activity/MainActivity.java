@@ -72,7 +72,7 @@ public class MainActivity extends AppCompatActivity {
             if (result.getContents() != null) {
                 loadQRCode(Integer.parseInt(result.getContents()));
             } else {
-                Toast.makeText(this, "Escaneamento cancelado.", Toast.LENGTH_LONG).show();
+                Toast.makeText(this, R.string.escaneamento_cancelado, Toast.LENGTH_LONG).show();
             }
         } else {
             super.onActivityResult(requestCode, resultCode, data);
@@ -126,6 +126,7 @@ public class MainActivity extends AppCompatActivity {
                                         prato.setNome(requestPrato.getNome());
                                         prato.setDescricao(requestPrato.getDescricao());
                                         prato.setFoto(requestPrato.getFoto());
+                                        prato.setPreco(requestPrato.getPreco());
                                         realmListPrato.add(prato);
                                     }
 
